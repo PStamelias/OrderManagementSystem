@@ -46,7 +46,8 @@ namespace OrderManagementSystem
                     context.Response.StatusCode = exception switch
                     {
                         ArgumentNullException => StatusCodes.Status400BadRequest,
-                        ArgumentException => StatusCodes.Status400BadRequest
+                        ArgumentException => StatusCodes.Status400BadRequest,
+                        Exception => StatusCodes.Status400BadRequest
                     };
 
                     var response = new

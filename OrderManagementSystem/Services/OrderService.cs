@@ -29,7 +29,7 @@ namespace OrderManagementSystem.Services
                 totalamount += product.Price;
             }
 
-            if (_customerRepository.GetCustomer(orderDTO.CustomerId)==null)
+            if ( await _customerRepository.GetCustomer(orderDTO.CustomerId)==null)
                 throw new Exception("Customer with ID "+ orderDTO.CustomerId+" does not exist");
 
             var order = new Order
