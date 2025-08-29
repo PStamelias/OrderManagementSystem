@@ -42,5 +42,11 @@ namespace OrderManagementSystem.Services
             };
             await _orderRepository.AddOrder(order);
         }
+
+
+        public async Task<Order?> GetOrderById(Guid id)
+        {
+            return await _orderRepository.GetOrder(id);
+        }
     }
 }

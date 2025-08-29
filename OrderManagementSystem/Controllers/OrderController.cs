@@ -26,10 +26,10 @@ namespace OrderManagementSystem.Controllers
 
         [HttpGet]
         [Route("GetOrder/{id}")]
-        public async Task<IActionResult> GetOrder(int id)
+        public async Task<IActionResult> GetOrder(Guid id)
         {
-            
-            return Ok();
+            var Order = await _orderService.GetOrderById(id);
+            return Ok(Order);
         }
 
     }
