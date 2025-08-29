@@ -1,0 +1,32 @@
+name: OrderManagementSystem Project
+on:
+    push:
+       branches: [ main ]
+    pull_request:
+       branches: [ main ]
+
+jobs:
+    build:
+        runs-on: windows-latest
+
+        steps:
+        - name: Checkout repository
+          uses : actions/checkout@v3
+
+        - name: Setup .NET
+          uses: actions/setup-dotnet@v3
+          with:
+            dotnet-version: '8.0.x'
+        
+        - name: Restore dependecies 
+          run: dotnet restore OrderManagementSystem.sln
+
+        - name: Build
+          run: dotnet build OrderManagementSystem.sln --configuration Release --no-restore
+
+        - name: Run Tests
+          run: dotnet test OrderManagementSystem.sln  --no-build --verbosity normal
+
+
+        - name: Publish OrderManagementSystem
+          run: dotnet publish   OrderManagementSystem/OrderManagementSystem.csproj -c Release -o ./publish
