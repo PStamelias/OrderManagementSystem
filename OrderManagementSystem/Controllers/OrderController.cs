@@ -29,9 +29,9 @@ namespace OrderManagementSystem.Controllers
         [Route("GetOrder/{id}")]
         public async Task<IActionResult> GetOrder(Guid id)
         {
-            var Order = await _orderService.GetOrderById(id);
+            var order  = await _orderService.GetOrderById(id);
             //dummy comment
-            return Ok(Order);
+            return Ok(order);
         }
 
     }
