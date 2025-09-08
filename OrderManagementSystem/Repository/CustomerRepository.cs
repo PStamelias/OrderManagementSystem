@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OrderManagementSystem.Controllers;
-using OrderManagementSystem.Models;
+﻿using OrderManagementSystem.Models;
 
 namespace OrderManagementSystem.Repository
 {

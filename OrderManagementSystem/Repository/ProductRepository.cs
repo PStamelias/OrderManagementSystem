@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using OrderManagementSystem.Models;
-using System.ComponentModel;
 
 namespace OrderManagementSystem.Repository
 {

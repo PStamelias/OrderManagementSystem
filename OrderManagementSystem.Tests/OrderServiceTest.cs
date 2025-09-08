@@ -1,13 +1,7 @@
-﻿using Castle.Core.Resource;
-using Moq;
+﻿using Moq;
 using OrderManagementSystem.Models;
 using OrderManagementSystem.Repository;
 using OrderManagementSystem.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderManagementSystem.Tests
 {

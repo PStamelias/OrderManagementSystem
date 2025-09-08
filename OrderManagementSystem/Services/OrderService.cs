@@ -1,5 +1,4 @@
-﻿using MassTransit;
-using OrderManagementSystem.Models;
+﻿using OrderManagementSystem.Models;
 using OrderManagementSystem.Repository;
 
 namespace OrderManagementSystem.Services
