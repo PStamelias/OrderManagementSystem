@@ -18,14 +18,14 @@ jobs:
           with:
             dotnet-version: '8.0.x'
         
-        - name: Restore dependecies 
+        - name: Restore dependencies 
           run: dotnet restore OrderManagementSystem.sln
 
         - name: Build
           run: dotnet build OrderManagementSystem.sln --configuration Release --no-restore
 
         - name: Run Tests
-          run: dotnet test OrderManagementSystem.sln   --verbosity normal
+          run: dotnet test OrderManagementSystem.sln --no-build   --verbosity normal
 
 
         - name: Publish OrderManagementSystem
